@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float forceStrength = 1;
+    public float maxSpeed = 5;
+    public float thrustStrength = 1;
     public float thrusterDistanceFromCenter = 1;
     public float velocityDecelerationWhenBothPress = 1;
 
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 worldForcePosition;
         // Rotate based on object rotation.
-        Vector3 thrustForce = transform.rotation * Vector3.up * forceStrength;
+        Vector3 thrustForce = transform.rotation * Vector3.up * thrustStrength;
 
         if (Input.GetButton("Player1Thrust") && Input.GetButton("Player2Thrust"))
         {
@@ -30,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
                 newAngularVelocity.z = 0;
             }
             rigidbody.angularVelocity = newAngularVelocity;
-            Debug.Log(newAngularVelocity.z);
             float velocityMagnitude = rigidbody.velocity.magnitude;
             rigidbody.velocity = transform.rotation * Vector3.up * velocityMagnitude;
         }
@@ -46,5 +46,12 @@ public class PlayerMovement : MonoBehaviour
             worldForcePosition = transform.TransformPoint(-Vector3.right * thrusterDistanceFromCenter);
             rigidbody.AddForceAtPosition(thrustForce, worldForcePosition);
         }
+
+        // Limit speed
+        if (rigidbody.velocity.magnitude > maxSpeed)
+        {
+            rigidbody.velocity = rigidbody.velocity.normalized * maxSpeed;
+        }
+        Debug.Log(rigidbody.velocity.magnitude);
     }
 }
