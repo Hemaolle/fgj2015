@@ -36,9 +36,9 @@ public class PlayerShoot : MonoBehaviour {
 	}
 
 	private void shoot(GameObject bulletPrefab, Transform gunPoint) {
-		print (gunPoint.InverseTransformDirection (Vector3.forward));
-			GameObject o = (GameObject) Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
-			o.rigidbody.AddForce(gunPoint.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
+		//print (gunPoint.InverseTransformDirection (Vector3.forward));
+		GameObject o = (GameObject) Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
+		o.rigidbody.AddForce(gunPoint.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
 
 
 	}
