@@ -16,9 +16,9 @@ TagManager:
   User Layer 8: Player
   User Layer 9: Enemy
   User Layer 10: EnemyBullet
-  User Layer 11: PlayerBullet
+  User Layer 11: Player1Bullet
   User Layer 12: PlayerDetector
-  User Layer 13: 
+  User Layer 13: Player2Bullet
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 

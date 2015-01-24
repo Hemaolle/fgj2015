@@ -176,10 +176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 11
   player2Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 13
   scoreAmount: 100
 --- !u!135 &13538440
 SphereCollider:

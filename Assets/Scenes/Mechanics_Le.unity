@@ -893,10 +893,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 11
   player2Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 13
   scoreAmount: 100
 --- !u!1 &458734256
 GameObject:
@@ -998,7 +998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &550677232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,10 +1188,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 11
   player2Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 13
   scoreAmount: 100
 --- !u!1 &598821211
 GameObject:
@@ -1256,7 +1256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438440, guid: bcd20bcd677e11d49856996cf57c8da2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 438440, guid: bcd20bcd677e11d49856996cf57c8da2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1284,7 +1284,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 138440, guid: bcd20bcd677e11d49856996cf57c8da2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11407428, guid: bcd20bcd677e11d49856996cf57c8da2, type: 2}
       propertyPath: ExplosionForce
@@ -3709,7 +3709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &982415461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3805,7 +3805,7 @@ Transform:
   m_PrefabInternal: {fileID: 647440161}
   m_GameObject: {fileID: 982415460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3883,10 +3883,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 11
   player2Layer:
     isEnabled: 1
-    _layer: 8
+    _layer: 13
   scoreAmount: 100
 --- !u!1 &1010971712
 GameObject:
@@ -4437,6 +4437,10 @@ Prefab:
     - target: {fileID: 11482856, guid: 57c65b0c080f419498c082d3a3720c36, type: 2}
       propertyPath: IsEnabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 109794, guid: 57c65b0c080f419498c082d3a3720c36, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57c65b0c080f419498c082d3a3720c36, type: 2}
