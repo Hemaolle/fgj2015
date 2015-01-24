@@ -6,9 +6,7 @@ public class GameOverScreen : MonoBehaviour {
 
     public Health healthToMonitor;
     public PlayerMovement playerMovement;
-    public GameObject [] enableOnGameOver;
-
-    private bool gameOver = false;
+    public PauseGame pauser;
 
 	// Use this for initialization
 	void Start () {
@@ -17,18 +15,8 @@ public class GameOverScreen : MonoBehaviour {
 	
     void GameOver (HealthEvent e)
     {
-        gameOver = true;
-        playerMovement.enabled = false;
-        foreach(GameObject enablee in enableOnGameOver) {
-            enablee.SetActive(true);
-        }
-    }
-
-    void Update() {
-
-        if (gameOver && Input.GetKey("space"))
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+        pauser.Pause();
+        pauser.unPaused += () => {
+            Application.LoadLevel(Application.loadedLevel); };
     }
 }
