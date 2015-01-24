@@ -13,7 +13,12 @@ GameObject:
   - 114: {fileID: 11469404}
   - 54: {fileID: 5469404}
   - 135: {fileID: 13569404}
-  m_Layer: 0
+  - 114: {fileID: 11477510}
+  - 114: {fileID: 11477512}
+  - 114: {fileID: 11477514}
+  - 114: {fileID: 11477516}
+  - 114: {fileID: 11477518}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +35,7 @@ GameObject:
   - 4: {fileID: 469400}
   - 33: {fileID: 3369404}
   - 23: {fileID: 2369404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +52,7 @@ GameObject:
   - 4: {fileID: 469402}
   - 198: {fileID: 19869402}
   - 199: {fileID: 19969402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P1ThrusterEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,8 +69,38 @@ GameObject:
   - 4: {fileID: 469404}
   - 198: {fileID: 19869404}
   - 199: {fileID: 19969404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P2ThrusterEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &177516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 477516}
+  m_Layer: 8
+  m_Name: GunPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &177518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 477518}
+  m_Layer: 8
+  m_Name: GunPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,6 +119,8 @@ Transform:
   - {fileID: 469400}
   - {fileID: 469402}
   - {fileID: 469404}
+  - {fileID: 477516}
+  - {fileID: 477518}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &469400
@@ -122,6 +159,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 469398}
   m_RootOrder: 2
+--- !u!4 &477516
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177516}
+  m_LocalRotation: {x: 0, y: 0, z: .382683486, w: .923879564}
+  m_LocalPosition: {x: -.699999988, y: .699999988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 469398}
+  m_RootOrder: 3
+--- !u!4 &477518
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177518}
+  m_LocalRotation: {x: 0, y: 0, z: -.382683486, w: .923879564}
+  m_LocalPosition: {x: .699999988, y: .699999988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 469398}
+  m_RootOrder: 4
 --- !u!23 &2369402
 Renderer:
   m_ObjectHideFlags: 1
@@ -208,6 +269,81 @@ MonoBehaviour:
   velocityDecelerationWhenBothPress: 10
   thrusterEffect1: {fileID: 19869402}
   thrusterEffect2: {fileID: 19869404}
+--- !u!114 &11477510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf3ed5b19c8ea945bb4b9dc5e0055ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab1: {fileID: 100000, guid: 840c496ea29a50e4ab576ea597235353, type: 2}
+  bulletPrefab2: {fileID: 100000, guid: 840c496ea29a50e4ab576ea597235353, type: 2}
+  gunPoint1: {fileID: 477516}
+  gunPoint2: {fileID: 477518}
+  bulletSpeed: 100
+  fireRate: 5
+--- !u!114 &11477512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43e2c61bdd75b641be2a3821be6273a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+--- !u!114 &11477514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4e17c93906f8b4e915132db9825395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &11477516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6a362349926234191a1d80c5fc8386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagerTag:
+    isEnabled: 0
+    _tag: 
+  damagerLayer:
+    isEnabled: 1
+    _layer: 10
+--- !u!114 &11477518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6a362349926234191a1d80c5fc8386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagerTag:
+    isEnabled: 0
+    _tag: 
+  damagerLayer:
+    isEnabled: 1
+    _layer: 9
 --- !u!135 &13569404
 SphereCollider:
   m_ObjectHideFlags: 1
