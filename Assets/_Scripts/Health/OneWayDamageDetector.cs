@@ -40,6 +40,7 @@ public class OneWayDamageDetector : MonoBehaviour {
 
 	void OnTriggerEnter(Collider otherCollider)
 	{
+		print (gameObject.name + " collide with " + otherCollider.name);
 		if (otherCollider.gameObject.layer == damagerLayer.layer) {
 			takeDamage(otherCollider.GetComponent<HealthDamager>(), LayerMask.LayerToName(damagerLayer.layer));
 			return;

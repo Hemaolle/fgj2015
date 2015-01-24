@@ -12,6 +12,14 @@ public class HealthZeroRecycler : MonoBehaviour {
 	
 	void HandlehealthZero (HealthEvent e)
 	{
+//		print (gameObject.name);
+//		if (parent != null) {
+//			parent.SetActive(false);
+//		} else {
+//
+//		}
+
 		gameObject.SetActive(false);
+
 	}
 }
