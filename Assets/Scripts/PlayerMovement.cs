@@ -31,8 +31,6 @@ public class PlayerMovement : MonoBehaviour
                 newAngularVelocity.z = 0;
             }
             rigidbody.angularVelocity = newAngularVelocity;
-            float velocityMagnitude = rigidbody.velocity.magnitude;
-            rigidbody.velocity = transform.rotation * Vector3.up * velocityMagnitude;
         }
 
         if (Input.GetButton("Player1Thrust"))
