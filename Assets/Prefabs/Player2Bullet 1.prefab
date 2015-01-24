@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11441064}
   - 114: {fileID: 11462454}
   m_Layer: 13
-  m_Name: Player2Bullet
+  m_Name: Player2Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
