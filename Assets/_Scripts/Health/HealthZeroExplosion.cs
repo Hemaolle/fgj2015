@@ -10,6 +10,8 @@ public class HealthZeroExplosion : MonoBehaviour {
 	public float ExplosionRadius;
 	public float ExplosionForce;
 
+	public UnityLayer affectedLayer;
+
 	void Awake() {
 		_health = GetComponent<Health>();
 		_health.healthZero += HandlehealthZero;
@@ -21,7 +23,7 @@ public class HealthZeroExplosion : MonoBehaviour {
 			Instantiate(ExplosionFXPrefab, transform.position, Quaternion.identity);
 		}
 
-		Collider[] colliders = Physics.OverlapSphere (transform.position, ExplosionRadius);
+		Collider[] colliders = Physics.OverlapSphere (transform.position, ExplosionRadius, 1 << affectedLayer.layer);
 		
 		foreach (Collider c in colliders) {
 			if (c && c.rigidbody) {
