@@ -164,7 +164,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177516}
-  m_LocalRotation: {x: 0, y: 0, z: .382683486, w: .923879564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.95599997, y: .354000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -176,7 +176,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177518}
-  m_LocalRotation: {x: 0, y: 0, z: -.382683486, w: .923879564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .959999979, y: .349999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -264,15 +264,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 169398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cf3ed5b19c8ea945bb4b9dc5e0055ef, type: 3}
+  m_Script: {fileID: 11500000, guid: b9dbb0077fcba404c9e5515667d031b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab1: {fileID: 100000, guid: 840c496ea29a50e4ab576ea597235353, type: 2}
-  bulletPrefab2: {fileID: 100000, guid: 840c496ea29a50e4ab576ea597235353, type: 2}
+  bulletPrefab2: {fileID: 100000, guid: 7ec583f3cfed2174bb2be4f54fed76ee, type: 2}
   gunPoint1: {fileID: 477516}
   gunPoint2: {fileID: 477518}
-  bulletSpeed: 100
+  bulletSpeed: 200
   fireRate: 5
+  minRotationZ_1: 0
+  maxRotationZ_1: 60
+  minRotationZ_2: -60
+  maxRotationZ_2: 0
+  rotateSpeed1: 1
+  rotateSpeed2: 2
 --- !u!114 &11477512
 MonoBehaviour:
   m_ObjectHideFlags: 1
