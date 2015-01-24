@@ -38,7 +38,11 @@ public class AIFollowPathWay : MonoBehaviour {
 		if (IsEnabled) {
 			if ((transform.position - waypoints[_CurrentIndex]).magnitude > deadZoneDistance) {
 				ownRigidbody.velocity = (waypoints[_CurrentIndex] - transform.position).normalized * speed;
-				ownRigidbody.transform.LookAt(waypoints[_CurrentIndex]);
+
+                // "Look at" the next waypoint
+                var relativeUp = Vector3.forward;
+                var relativePos = waypoints[_CurrentIndex] - transform.position;
+                transform.rotation = Quaternion.LookRotation(relativeUp, relativePos);
 			} else {
 				_CurrentIndex = (_CurrentIndex + 1) % waypoints.Length;
 			}
