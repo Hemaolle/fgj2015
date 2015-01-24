@@ -62,7 +62,7 @@ public class PlayerShoot2 : MonoBehaviour {
 		Quaternion nextRotation_1 = gunPoint.localRotation;
 		Vector3 euler1 = nextRotation_1.eulerAngles;
         euler1.z += changeZ_1 * speed;
-        euler1.z =Mathf.Rad2Deg * Mathf.Clamp (Mathf.Deg2Rad * euler1.z, Mathf.Deg2Rad * minZ, Mathf.Deg2Rad * maxZ);
+        euler1.z = Mathf.Clamp (euler1.z, minZ, maxZ);
 
 		gunPoint.localRotation = Quaternion.Euler (euler1);
 	}
