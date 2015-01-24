@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 worldForcePosition;
         // Rotate based on object rotation.
         Vector3 thrustForce = transform.TransformDirection(Vector3.up) * thrustStrength;
 
