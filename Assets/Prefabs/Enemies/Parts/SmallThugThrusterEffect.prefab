@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19803328}
   - 199: {fileID: 19903328}
   m_Layer: 0
-  m_Name: PlayerThrusterEffect
+  m_Name: SmallThugThrusterEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

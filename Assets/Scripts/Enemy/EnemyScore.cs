@@ -19,8 +19,8 @@ public class EnemyScore : MonoBehaviour {
 	{
 		if (e.tags.Contains(LayerMask.LayerToName(player1Layer.layer))) {
 			PlayerScore.Instances[PlayerType.Player1].ModifyScore(scoreAmount);
-		} else if (e.tags.Contains(LayerMask.LayerToName(player1Layer.layer))) {
-			PlayerScore.Instances[PlayerType.Player1].ModifyScore(scoreAmount);
+		} else if (e.tags.Contains(LayerMask.LayerToName(player2Layer.layer))) {
+			PlayerScore.Instances[PlayerType.Player2].ModifyScore(scoreAmount);
 		} 
 		
 	}
