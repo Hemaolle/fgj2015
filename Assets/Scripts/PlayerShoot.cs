@@ -21,7 +21,8 @@ public class PlayerShoot : MonoBehaviour {
 	private float _timer2 = 0f;
 
     void Start() {
-        _player1Damage = _player2Damage = baseDamage;
+        _player1Damage = baseDamage;
+        _player2Damage = baseDamage;
     }
 
 	void Update() {

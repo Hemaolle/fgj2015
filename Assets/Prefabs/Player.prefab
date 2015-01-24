@@ -275,8 +275,8 @@ MonoBehaviour:
   fireRate: 5
   minRotationZ_1: 0
   maxRotationZ_1: 60
-  minRotationZ_2: -60
-  maxRotationZ_2: 0
+  minRotationZ_2: 0
+  maxRotationZ_2: 60
   rotateSpeed1: 1
   rotateSpeed2: 2
 --- !u!114 &11477512

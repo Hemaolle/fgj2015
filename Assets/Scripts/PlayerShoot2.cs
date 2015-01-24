@@ -43,7 +43,7 @@ public class PlayerShoot2 : MonoBehaviour {
 			}
 		//}
 
-		moveAim (Input.GetAxis("AimMove2"), gunPoint2, rotateSpeed2, minRotationZ_2, maxRotationZ_2);
+		moveAim (Input.GetAxis("AimMove2"), gunPoint2, rotateSpeed2, 360-minRotationZ_2, 360-maxRotationZ_2);
 
 		_timer1 += Time.deltaTime;
 		_timer2 += Time.deltaTime;	
@@ -61,12 +61,8 @@ public class PlayerShoot2 : MonoBehaviour {
 		float changeZ_1 = axis;
 		Quaternion nextRotation_1 = gunPoint.localRotation;
 		Vector3 euler1 = nextRotation_1.eulerAngles;
-		//euler1.z = Mathf.Clamp (euler1.z + changeZ_1 * speed, minZ, maxZ);
-        euler1.z = euler1.z + changeZ_1 * speed;
-        if (euler1.z > maxZ)
-            euler1.z = maxZ;
-        if (euler1.z < minZ)
-            euler1.z = minZ;
+        euler1.z += changeZ_1 * speed;
+        euler1.z =Mathf.Rad2Deg * Mathf.Clamp (Mathf.Deg2Rad * euler1.z, Mathf.Deg2Rad * minZ, Mathf.Deg2Rad * maxZ);
 
 		gunPoint.localRotation = Quaternion.Euler (euler1);
 	}
