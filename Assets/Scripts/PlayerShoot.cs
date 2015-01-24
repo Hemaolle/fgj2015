@@ -12,10 +12,17 @@ public class PlayerShoot : MonoBehaviour {
 	public float bulletSpeed = 10f;
 	public float fireRate = 1f;
 
+    public float baseDamage = 1f;
+
+    private float _player1Damage;
+    private float _player2Damage;
+
 	private float _timer1 = 0f;
 	private float _timer2 = 0f;
 
-
+    void Start() {
+        _player1Damage = _player2Damage = baseDamage;
+    }
 
 	void Update() {
 		if (Input.GetAxis ("Player1Shoot") > 0) {
@@ -41,6 +48,7 @@ public class PlayerShoot : MonoBehaviour {
 		//print (gunPoint.InverseTransformDirection (Vector3.forward));
 		GameObject o = (GameObject) Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
 		o.rigidbody.AddForce(gunPoint.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
+        o.transform.Rotate(gunPoint.eulerAngles);
 
 
 	}

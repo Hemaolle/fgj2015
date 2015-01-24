@@ -53,7 +53,7 @@ public class PlayerShoot2 : MonoBehaviour {
 		//print (gunPoint.InverseTransformDirection (Vector3.forward));
 		GameObject o = (GameObject) Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
 		o.rigidbody.AddForce(gunPoint.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
-
+        o.transform.Rotate(gunPoint.eulerAngles);
 
 	}
 
