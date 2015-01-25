@@ -3,9 +3,10 @@ using System.Collections;
 
 public class Spin : MonoBehaviour {
 
-    public float angularVelocity = 1;
+    public Vector3 velocity;
 	
-    void Start() {
-        rigidbody.angularVelocity = new Vector3(0, 0, angularVelocity);
+    void Update()
+    {
+        transform.Rotate(velocity * Time.deltaTime);
     }
 }

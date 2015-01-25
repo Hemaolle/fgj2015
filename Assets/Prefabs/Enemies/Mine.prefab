@@ -20,6 +20,7 @@ GameObject:
   - 33: {fileID: 3364272}
   - 23: {fileID: 2364272}
   - 114: {fileID: 11459008}
+  - 114: {fileID: 11451748}
   m_Layer: 9
   m_Name: Mine
   m_TagString: Untagged
@@ -198,6 +199,18 @@ MonoBehaviour:
   affectedLayer:
     isEnabled: 1
     _layer: 8
+--- !u!114 &11451748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dc17c404911164e9042dcbe23bf691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angularVelocity: 1
 --- !u!114 &11459008
 MonoBehaviour:
   m_ObjectHideFlags: 1
