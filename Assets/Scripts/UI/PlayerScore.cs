@@ -12,9 +12,13 @@ public class PlayerScore : MonoBehaviour {
 	public float Score;
 
 	void Awake() {
-		if (!Instances.ContainsKey (player)) {
-			Instances.Add(player, this);
-		}
+		if (!Instances.ContainsKey(player))
+        {
+            Instances.Add(player, this);
+        } else
+        {
+            Instances[player] = this;
+        }
 	}
 
 	void Update() {
