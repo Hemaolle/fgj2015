@@ -53,8 +53,14 @@ public class PlayerShoot2 : MonoBehaviour {
 		//print (gunPoint.InverseTransformDirection (Vector3.forward));
 		GameObject o = (GameObject) Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
 		o.rigidbody.AddForce(gunPoint.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
-        o.transform.Rotate(gunPoint.eulerAngles);
 
+        o.transform.Rotate(gunPoint.eulerAngles);
+		// "Look at" the next waypoint
+		var relativeUp = Vector3.forward;
+		var relativePos = gunPoint.position + gunPoint.TransformDirection (Vector3.up);
+		o.transform.rotation = Quaternion.LookRotation(relativeUp, relativePos);
+
+		//print ("hi");
 	}
 
 	private void moveAim(float axis, Transform gunPoint, float speed, float minZ, float maxZ) {
