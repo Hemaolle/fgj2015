@@ -13,8 +13,9 @@ GameObject:
   - 95: {fileID: 9530974}
   - 114: {fileID: 11430974}
   - 54: {fileID: 5430974}
-  - 135: {fileID: 13556028}
-  m_Layer: 0
+  - 114: {fileID: 11435696}
+  - 64: {fileID: 6435696}
+  m_Layer: 9
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130974}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.38999999, y: 5.61999989, z: -.0299999993}
+  m_LocalPosition: {x: 37.8499985, y: 12.3100004, z: -.0299999993}
   m_LocalScale: {x: 2.25492668, y: 2.25492716, z: 2.25492716}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,6 +76,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 62
   m_CollisionDetection: 0
+--- !u!64 &6435696
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 64672d3175a424b408496d76529dc1e1, type: 3}
 --- !u!95 &9530974
 Animator:
   serializedVersion: 3
@@ -102,18 +116,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 10, y: -20, z: 35}
---- !u!135 &13556028
-SphereCollider:
+--- !u!114 &11435696
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .945215523
-  m_Center: {x: -.00287729502, y: .0167263746, z: .0236973464}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4e17c93906f8b4e915132db9825395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
