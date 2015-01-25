@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
         bool p1Thrusting = Input.GetButton("Player1Thrust");
         bool p2Thrusting = Input.GetButton("Player2Thrust");
 
+		playSoundEffect (p1Thrusting, "thrust");
+		playSoundEffect (p2Thrusting, "thrust");
+
         HandleThrusting(Vector3.right * thrusterDistanceFromCenter, thrustForce, p1Thrusting, thrusterEffect1);
         HandleThrusting(-Vector3.right * thrusterDistanceFromCenter, thrustForce, p2Thrusting, thrusterEffect2);
 
@@ -58,4 +61,10 @@ public class PlayerMovement : MonoBehaviour
                 thrusterEffect.Stop();
         }
     }
+
+	private void playSoundEffect(bool state, string key) {
+		if (state) {
+			SoundEffectManager.playSoundEffectOnce(key);
+		}
+	}
 }
