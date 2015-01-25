@@ -33,7 +33,7 @@ GameObject:
   - 114: {fileID: 11477514}
   - 114: {fileID: 11477516}
   - 114: {fileID: 11477518}
-  - 114: {fileID: 11405374}
+  - 114: {fileID: 11423114}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -297,7 +297,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11405374
+--- !u!114 &11423114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -308,18 +308,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720db837649517d4b925f3252dc01fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab1: {fileID: 100000, guid: 840c496ea29a50e4ab576ea597235353, type: 2}
-  bulletPrefab2: {fileID: 100000, guid: 7ec583f3cfed2174bb2be4f54fed76ee, type: 2}
-  gunPoint1: {fileID: 477516}
-  gunPoint2: {fileID: 477518}
-  bulletSpeed: 10
-  fireRate: 1
-  minRotationZ_1: 0
-  maxRotationZ_1: 60
-  minRotationZ_2: 270
-  maxRotationZ_2: 330
-  rotateSpeed1: 1
-  rotateSpeed2: 2
+  p1Bullet: {fileID: 100000, guid: 840c496ea29a50e4ab576ea597235353, type: 2}
+  p1Gun: {fileID: 177516}
+  p2Bullet: {fileID: 100000, guid: 7ec583f3cfed2174bb2be4f54fed76ee, type: 2}
+  p2Gun: {fileID: 177518}
+  bulletSpeed: 500
+  fireRate: 5
+  maxRot: 60
+  rotSpd: 1
 --- !u!114 &11469404
 MonoBehaviour:
   m_ObjectHideFlags: 1
