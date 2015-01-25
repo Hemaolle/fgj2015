@@ -12,7 +12,8 @@ GameObject:
   - 23: {fileID: 2306206}
   - 95: {fileID: 9506206}
   - 65: {fileID: 6591510}
-  m_Layer: 0
+  - 114: {fileID: 11440556}
+  m_Layer: 14
   m_Name: tile_quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,6 +86,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11440556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4e17c93906f8b4e915132db9825395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

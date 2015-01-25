@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419282}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: tile_tri1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,8 @@ GameObject:
   - 33: {fileID: 3319282}
   - 23: {fileID: 2319282}
   - 64: {fileID: 6419282}
-  m_Layer: 0
+  - 114: {fileID: 11455014}
+  m_Layer: 14
   m_Name: tile_tri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,13 +92,25 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119284}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 825902d40645dd54bb6b638693f6de22, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: ef5a4f062d3c08743b9a14059636ede1, type: 3}
+--- !u!114 &11455014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4e17c93906f8b4e915132db9825395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
