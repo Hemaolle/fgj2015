@@ -30,6 +30,7 @@ public class PlayerAimShoot : MonoBehaviour {
             if (p1Timer > shootTime) 
             {
                 shoot(p1Bullet, p1Gun);
+				SoundEffectManager.playSoundEffectOnce("shoot1");
                 p1Timer = 0;
             }
        
@@ -37,12 +38,13 @@ public class PlayerAimShoot : MonoBehaviour {
         
         moveAim (Input.GetAxis("AimMove1"), p1Gun, gun1minRot, gun1maxRot);
         
-        
+         
         if (Input.GetAxis ("Player2Shoot") > 0) 
         {
             if (p2Timer > shootTime) 
             {
                 shoot(p2Bullet, p2Gun);
+				SoundEffectManager.playSoundEffectOnce("shoot2");
                 p2Timer = 0;
             }
         }
@@ -60,6 +62,7 @@ public class PlayerAimShoot : MonoBehaviour {
         o.rigidbody.AddForce(gun.transform.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
         o.transform.Rotate(gun.transform.eulerAngles);
         
+
     }
 
     private void moveAim(float axis, GameObject gun, float minRot, float maxRot) 
