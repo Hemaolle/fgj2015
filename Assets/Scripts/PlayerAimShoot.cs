@@ -11,6 +11,8 @@ public class PlayerAimShoot : MonoBehaviour {
     
     public float bulletSpeed = 500f;
     public float fireRate = 5f;
+
+    public float bulletLifeTime = 1f;
     
     private float p1Timer = 0f;
     private float p2Timer = 0f;
@@ -61,7 +63,7 @@ public class PlayerAimShoot : MonoBehaviour {
         GameObject o = (GameObject) Instantiate(bullet, gun.transform.position, Quaternion.identity);
         o.rigidbody.AddForce(gun.transform.TransformDirection(Vector3.up) * bulletSpeed, ForceMode.Force);
         o.transform.Rotate(gun.transform.eulerAngles);
-        
+        Destroy(o, bulletLifeTime);
 
     }
 

@@ -37,6 +37,7 @@ GameObject:
   - 114: {fileID: 11423114}
   - 114: {fileID: 11464218}
   - 114: {fileID: 11464216}
+  - 114: {fileID: 11469158}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -131,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.65999997, y: -18.7399998, z: -.100000001}
+  m_LocalPosition: {x: -2.29216242, y: -16.5759373, z: -.0282141902}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 436064}
@@ -317,6 +318,7 @@ MonoBehaviour:
   p2Gun: {fileID: 177516}
   bulletSpeed: 500
   fireRate: 5
+  bulletLifeTime: .800000012
   gun1minRot: 0
   gun1maxRot: 60
   gun2minRot: 0
@@ -351,6 +353,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11464218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94075b0ab875df54692bc97c4a9115fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionFXPrefab: {fileID: 147218, guid: b0713a2ddd62fd94dab1baf4e598c706, type: 2}
+  ExplosionRadius: 0
+  ExplosionForce: 0
+  affectedLayer:
+    isEnabled: 0
+    _layer: 0
+--- !u!114 &11469158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
