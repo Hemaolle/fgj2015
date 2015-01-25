@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11410700}
   - 114: {fileID: 11410704}
   - 114: {fileID: 11463290}
+  - 64: {fileID: 6445074}
   m_Layer: 9
   m_Name: HeavyThug
   m_TagString: Untagged
@@ -30,9 +31,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110700}
-  m_LocalRotation: {x: -.722256958, y: 0, z: 0, w: .69162488}
-  m_LocalPosition: {x: -2.0999999, y: 4.80000019, z: 2.4000001}
-  m_LocalScale: {x: 17.627327, y: 17.6273327, z: 17.6273327}
+  m_LocalRotation: {x: -.645302594, y: -.324406624, z: .310648024, w: .617934287}
+  m_LocalPosition: {x: 50.5, y: 9.69999981, z: 1.29999995}
+  m_LocalScale: {x: 17.627327, y: 17.6273327, z: 17.6273346}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,6 +79,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!64 &6445074
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: ab911564e61a8144a9f3859890784874, type: 3}
 --- !u!114 &11410700
 MonoBehaviour:
   m_ObjectHideFlags: 1
