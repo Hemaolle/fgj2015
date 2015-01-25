@@ -31,6 +31,6 @@ public class HealthZeroExplosion : MonoBehaviour {
 			}
 		}
 
-
+		SoundEffectManager.playSoundEffect ("explosion");
 	}
 }
