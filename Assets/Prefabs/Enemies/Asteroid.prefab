@@ -13,6 +13,7 @@ GameObject:
   - 95: {fileID: 9530974}
   - 114: {fileID: 11430974}
   - 54: {fileID: 5430974}
+  - 135: {fileID: 13556028}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -100,7 +101,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dc17c404911164e9042dcbe23bf691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularVelocity: 1
+  velocity: {x: 10, y: -20, z: 35}
+--- !u!135 &13556028
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .945215523
+  m_Center: {x: -.00287729502, y: .0167263746, z: .0236973464}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
