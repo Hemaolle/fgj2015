@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem thrusterEffect1;
     public ParticleSystem thrusterEffect2;
 
+	private bool p1Thrusting;
+	private bool p2Thrusting;
+
     // Use this for initialization
     void Start()
     {
@@ -19,17 +22,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Rotate based on object rotation.
-        Vector3 thrustForce = transform.TransformDirection(Vector3.up) * thrustStrength;
-
-        bool p1Thrusting = Input.GetButton("Player1Thrust");
-        bool p2Thrusting = Input.GetButton("Player2Thrust");
+        p1Thrusting = Input.GetButton("Player1Thrust");
+        p2Thrusting = Input.GetButton("Player2Thrust");
 
 		playSoundEffect (p1Thrusting, "thrust");
 		playSoundEffect (p2Thrusting, "thrust");
-
-        HandleThrusting(Vector3.right * thrusterDistanceFromCenter, thrustForce, p1Thrusting, thrusterEffect1);
-        HandleThrusting(-Vector3.right * thrusterDistanceFromCenter, thrustForce, p2Thrusting, thrusterEffect2);
 
         // Limit speed
         if (rigidbody.velocity.magnitude > maxSpeed)
@@ -37,6 +34,14 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.velocity = rigidbody.velocity.normalized * maxSpeed;
         }
     }
+
+	void FixedUpdate() {
+		// Rotate based on object rotation.
+		Vector3 thrustForce = transform.TransformDirection(Vector3.up) * thrustStrength;
+
+		HandleThrusting(Vector3.right * thrusterDistanceFromCenter, thrustForce, p1Thrusting, thrusterEffect1);
+		HandleThrusting(-Vector3.right * thrusterDistanceFromCenter, thrustForce, p2Thrusting, thrusterEffect2);
+	}
 
     /// <summary>
     /// Applies the thrust force and turns the thruster particle effect on and off.
